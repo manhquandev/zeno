@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import 'vuetify/styles'
+import Vuetify from "./plugins/vuetify.ts";
 
-createApp(App).mount('#app').$nextTick(() => {
+createApp(App).use(Vuetify).mount('#app').$nextTick(() => {
   // Remove Preload scripts loading
   postMessage({ payload: 'removeLoading' }, '*')
 
